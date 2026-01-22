@@ -560,7 +560,7 @@ class LTI13 {
             if (is_array($debug_log) ) $debug_log[] = $response_headers;
 
             $nextUrl = null;
-            $link_header = U::get($response_headers, 'Link', null);
+            $link_header = U::get($response_headers, 'link', null);
             if ( is_string($link_header) ) {
                 if ( is_array($debug_log) ) $debug_log[] = 'Link header: ' . $link_header;
                 $linkHeader = LinkHeader::fromString($link_header);
